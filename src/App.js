@@ -69,7 +69,7 @@ class App extends React.Component {
         <header>
           <div className="header"></div>
         </header>
-        <div className={this.state.tagsToggle ? "search" : "search none"}>
+        <div className={this.state.tagsToggle ? "search" : "search none"} id="search">
           <div className="search__container">
             <div className="search__items">
               {this.state.tags.map(tag => {
@@ -92,7 +92,7 @@ class App extends React.Component {
             const tags = [item.role, item.level, ...item.languages, ...item.tools];
             return (
               <div className={item.featured ? "list__item list__item-border" : "list__item"} key={item.id}>
-                <div className="list__image" style={{ backgroundImage: `url(${require("./images/" + item.logo)}`}}>
+                <div className="list__image" style={{ backgroundImage: `url(${require("./images/" + item.logo)}` }}>
                   {/* <img src={require('./images/' + item.logo)} alt="" /> */}
                 </div>
                 <div className="list__text">
