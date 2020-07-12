@@ -116,7 +116,7 @@ class App extends React.Component {
                   <div className="list__tags">
                     {tags.map((tag) => {
                       return (
-                        <a href="#search" onClick={this.addTag} className="list__tag" data-text={tag} key={tag}>{tag}</a>
+                        <a href="#" onClick={this.addTag} className="list__tag" data-text={tag} key={tag}>{tag}</a>
                       )
                     })}
                   </div>
