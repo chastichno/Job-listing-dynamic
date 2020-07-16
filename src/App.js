@@ -36,9 +36,11 @@ class App extends React.Component {
     }
     const tag = event.target.dataset.text;
     console.log("Add tag: ", tag);
+    if (!this.state.tags.includes(tag)) {
+      var joined = this.state.tags.concat(tag);
+      this.setState({ tags: joined })
+    }
 
-    var joined = this.state.tags.concat(tag);
-    this.setState({ tags: joined })
   }
 
   removeTag(event) {
